@@ -1,24 +1,45 @@
+import { useEffect, useState } from 'react';
+
 import { Routes, Route } from 'react-router-dom';
 
-import Home from'./Home.js'
-import Header from './Header.js'
+import { addBackground, addParallax } from './parallax.js';
+import Header from './Header.js';
+import Home from'./Home.js';
+import Projects from './Projects.js';
 
 import './App.css';
 
 function App() {
+
+  const [parallax, setParallax] = useState(false);
+
+  useEffect(() => {
+    addBackground();
+    addParallax();
+  }, [])
+
   return (
     <div className="app">
+      
+      <Header />
 
-      <Routes>
+      <div id="background">
+        <div
+          id="parallax" 
+          className={parallax ? "parallax-on" : "parallax-off"}>
 
-        <Route exact path="/" element={<Home />} />
+          <Routes>
 
-        <Route exact path="/projects" element={<div>projets</div>} />
+            <Route exact path="/" element={<Home setParallax={setParallax}/>} />
 
-        < Route exact path="/contact" element={<div>contact</div>} />
+            <Route exact path="/projects" element={<Projects setParallax={setParallax}/>} />
 
-      </Routes>
+            <Route exact path="/contact" element={<div>contact</div>} />
 
+          </Routes>
+
+        </div>
+      </div>
     </div>
   );
 }
