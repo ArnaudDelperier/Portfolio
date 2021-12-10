@@ -9,8 +9,7 @@ function Projects({setParallax}) {
     useEffect(() => {
         setParallax(false)
         console.log(projects)
-      }, [setParallax])
-    
+      }, [setParallax])   
 
     return(
         <div className="projects">
