@@ -26,8 +26,7 @@ function App() {
       <div id="background">
         <div
           id="parallax" 
-          className={parallax ? "parallax-on" : "parallax-off"}
-          onAnimationEnd={() => document.getElementById("parallax").style.backgroundImage = "none"}>
+          className={parallax ? "parallax-on" : "parallax-off"} // blabla
 
           <Routes>
 
