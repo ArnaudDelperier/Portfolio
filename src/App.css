@@ -30,12 +30,11 @@
 }
 
 .parallax-on {
-  animation: 0.5s parallaxOn;
+  animation: 2s parallaxOn;
 }
 
 .parallax-off {
-  animation: 0.5s parallaxOff;
-  opacity: 0;
+  animation: 2s parallaxOff;
 }
 
 @keyframes parallaxOn {
