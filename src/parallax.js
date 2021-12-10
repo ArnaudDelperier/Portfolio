@@ -30,6 +30,5 @@ export function addParallax() {
         let _depth3 = `${50 - (_mouseX - _w) * 0.01}% ${50 - (_mouseY - _h) * 0.2}%`;
         let x = `${_depth3}, ${_depth2}, ${_depth1}`;
         elemParallax.style.backgroundPosition = x;
-        console.log(x)
     }
 }

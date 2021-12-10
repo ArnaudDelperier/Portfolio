@@ -1,3 +1,52 @@
 .projects-container {
-    z-index: 100;
+    display: flex;
+}
+
+.project {  
+    color: #fff; 
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 16px;
+    width: 300px;
+    height: 300px;
+}
+
+.project__name {
+    width: 100%;
+    font-family: 'Audiowide', cursive;
+    text-align: center;
+    margin: 12px 0 36px 0;
+    font-size: 1.5rem;
+}
+
+.project__description {
+    font-family: 'Nova Square', cursive;
+    text-align: center;
+    margin: 36px 12px 12px 12px;
+}
+
+.project__text {
+    position: absolute;
+    opacity: 0;
+    text-shadow: 1px 1px 1px #000;
+}
+
+.project__img {
+    width: 100%;
+    min-height: 100%;
+    object-position: top left;
+    object-fit: cover;
+}
+
+.project:hover .project__text{
+    transition: 0.3s;
+    opacity: 1;
+}
+
+.project:hover .project__img {
+    transition: 0.6s;
+    filter: blur(2px);
+    opacity: 0.5;
 }
