@@ -13,7 +13,11 @@ function Projects({setParallax}) {
 
     return(
         <div className="projects">
-            <div className="projects-container">
+            <button 
+            onClick={() => {document.getElementById("projects-scrollbar").scrollLeft -= 496;}} 
+            className="projects-scrollLeft"> 
+            </button>
+            <div className="projects-container" id="projects-scrollbar">
             {projects.map((p) => (
                 <div key={p.name} className="project">
                     <img className="project__img" src={p.image} alt={p.name}/>
@@ -24,6 +28,10 @@ function Projects({setParallax}) {
                 </div>
             ))}
             </div>
+            <button 
+            onClick={() => {document.getElementById("projects-scrollbar").scrollLeft += 496;}} 
+            className="projects-scrollRight"> 
+            </button>
         </div>
     )
 }

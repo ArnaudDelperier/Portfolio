@@ -1,16 +1,28 @@
-.projects-container {
+.projects {
     display: flex;
+    align-items: center;
 }
 
-.project {  
-    color: #fff; 
+.projects-container {
+    position: relative;
+    margin: auto;
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 90px;
+    width: 80%;
+    overflow-x: hidden;
+}
+
+.project {
     position: relative; 
+    color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 16px;
-    width: 300px;
-    height: 300px;
+    margin: 32px 48px;
+    min-width: 400px;
+    height: 400px;
+    border: 2px solid gray;
 }
 
 .project__name {
@@ -49,4 +61,18 @@
     transition: 0.6s;
     filter: blur(2px);
     opacity: 0.5;
+}
+
+.projects-scrollLeft {
+    background-color: red;
+    margin: 50px;
+    width: 50px;
+    height: 50px;
+}
+
+.projects-scrollRight {
+    background-color: greenyellow;
+    margin: 50px;
+    width: 50px;
+    height: 50px;
 }
