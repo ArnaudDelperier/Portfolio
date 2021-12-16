@@ -8,7 +8,7 @@ const projects = [
     {
         name: "Bubbles Blaster",
         description: 'Jeu réalisé dans le cadre d\'un challenge " 1 hour 1 game ". Détruisez les bulles avant qu\'elles ne vous écrasent dans ce mini jeu d\'arcade hardcore.',
-        image: require('./img/horrorFootageFinder.png').default,
+        image: require('./img/bubblesblaster.png').default,
         link: "https://bubblesblaster.netlify.app/"
     },
     {
@@ -20,7 +20,7 @@ const projects = [
     {
         name: "Shifumi Lizard Spock",
         description: 'Jeu du pierre-papier-ciseaux revisité version "The Big Bang Theory". ',
-        image: require('./img/horrorFootageFinder.png').default,
+        image: require('./img/shifumi-lizard-spock.png').default,
         link: "https://shifumi-lizard-spock.netlify.app/"
     },
     {

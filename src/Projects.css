@@ -1,6 +1,17 @@
 .projects {
+    position: relative;
+    padding-top: 60px;
     display: flex;
     align-items: center;
+}
+
+.projects-title {
+    font-family: 'Audiowide', cursive;
+    text-align: center;
+    padding-top: 150px;
+    color: #fff;
+    font-size: 3rem;
+    text-shadow: 2px 2px 2px #000;
 }
 
 .projects-container {
@@ -8,7 +19,6 @@
     margin: auto;
     display: flex;
     justify-content: flex-start;
-    padding-top: 90px;
     width: 80%;
     overflow-x: hidden;
 }
@@ -25,12 +35,20 @@
     border: 2px solid gray;
 }
 
+.project:first-child {
+    margin: 32px 48px 32px 72px;
+}
+
+.project:last-child {
+    margin: 32px 72px 32px 48px;
+}
+
+
 .project__name {
-    width: 100%;
     font-family: 'Audiowide', cursive;
     text-align: center;
     margin: 12px 0 36px 0;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .project__description {
@@ -40,6 +58,7 @@
 }
 
 .project__text {
+    width: 100%;
     position: absolute;
     opacity: 0;
     text-shadow: 1px 1px 1px #000;
@@ -63,16 +82,63 @@
     opacity: 0.5;
 }
 
-.projects-scrollLeft {
-    background-color: red;
-    margin: 50px;
-    width: 50px;
-    height: 50px;
+.scroll-button {
+    position: relative;
+    margin: 70px 20px 0 60px;
+    width: 80px;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    transition: 0.3s;
 }
 
-.projects-scrollRight {
-    background-color: greenyellow;
-    margin: 50px;
-    width: 50px;
-    height: 50px;
+.scroll-button:nth-child(3) {
+    margin: 70px 60px 0 20px;
+}
+
+
+.scroll-button:hover {
+    transform: scale(125%);
+}
+
+.arrow-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    background-color: rgba(128, 128, 128);
+    width: 80px;
+    height: 80px;
+    clip-path: polygon(25% 0, 0% 50%, 25% 100%, 55% 100%, 30% 50%, 55% 0);
+}
+
+.arrow-left:nth-child(2) {
+    left: 35px;
+    background-color: rgba(128, 128, 128, 0.75);
+}
+
+.arrow-left:nth-child(3) {
+    left: 70px;
+    background-color: rgba(128, 128, 128, 0.5);
+}
+
+.arrow-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    background-color: rgba(128, 128, 128);
+    width: 80px;
+    height: 80px;
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 45% 100%, 70% 50%, 45% 0);
+}
+
+.arrow-right:nth-child(2) {
+    right: 35px;
+    background-color: rgba(128, 128, 128, 0.75);
+}
+
+.arrow-right:nth-child(3) {
+    right: 70px;
+    background-color: rgba(128, 128, 128, 0.5);
 }
