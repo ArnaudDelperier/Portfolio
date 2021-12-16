@@ -5,6 +5,7 @@ import './Projects.css'
 import projects from "./data";
 
 
+
 function Projects({setParallax}) {
 
     useEffect(() => {
@@ -15,15 +16,7 @@ function Projects({setParallax}) {
         <>
         <h1 className="projects-title">Projets</h1>
         <div className="projects">
-            <button
-            onClick={() => {
-                document.getElementById("projects-scrollbar").scrollLeft -= 496;
-            }} 
-            className="scroll-button">
-                <span className="arrow-left"></span>
-                <span className="arrow-left"></span>
-                <span className="arrow-left"></span>
-            </button>
+            <div className="scrollbar-effect"></div>
             <div className="projects-container" id="projects-scrollbar">
             {projects.map((p) => (
                 <a href={p.link} target="_blank" rel="noreferrer">
@@ -37,13 +30,6 @@ function Projects({setParallax}) {
                 </a>
             ))}
             </div>
-            <button 
-            onClick={() => {document.getElementById("projects-scrollbar").scrollLeft += 496;}} 
-            className="scroll-button">
-                <span className="arrow-right"></span>
-                <span className="arrow-right"></span>
-                <span className="arrow-right"></span> 
-            </button>
         </div>
         </>
     )

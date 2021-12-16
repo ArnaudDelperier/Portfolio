@@ -21,7 +21,7 @@ function Home({setParallax}) {
           className="home-text-container"
           >
             <div className="title">Arnaud Delperier</div>
-            <div className="description">Hello, passioné par l'informatique depuis l'enfance j'ai décidé de faire du développement mon métier. Je suis formé en tant que développeur web fullstack ainsi qu'en game desgin.</div>
+            <div className="description">Hello, passioné par l'informatique depuis l'enfance j'ai décidé de faire du développement mon métier. Je suis formé en tant que développeur web fullstack ainsi qu'en game design.</div>
           </motion.div>
     </div>
   );
