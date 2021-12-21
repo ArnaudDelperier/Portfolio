@@ -19,7 +19,7 @@
     margin: auto;
     display: flex;
     justify-content: flex-start;
-    width: 70%;
+    width: 80%;
     overflow-x: scroll;
     mask-image: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 10%, rgba(255,255,255,1) 90%, rgba(255,255,255,0) 100%);
 }
@@ -118,4 +118,84 @@
     transition: 0.6s;
     filter: blur(2px);
     opacity: 0.5;
+}
+
+.scrollbar-button {
+    width: 80px;
+    height: 80px;
+}
+
+
+.scrollbtn-wrapper{
+    position: relative;
+}
+
+
+// Button settings
+$btn-size:                100px;
+$btn-arrowsize:           calc($btn-size / 4);
+
+// Button colors
+$btn-color:               gray;
+$btn-bg:                  #111;
+$btn-border:              gray;
+
+// Button hover colors
+$btn-hover-color:         #111;
+$btn-bg-hover:            white;
+$btn-hover-border-color:  white;
+
+body {
+  background: #111;
+}
+
+.arrowbtn {
+  position: absolute;
+  width: $btn-size;
+  height: $btn-size;
+  background: $btn-bg;
+  border: 2px solid $btn-border;
+  border-radius: $btn-size;
+  color: $btn-color;
+  cursor: pointer;
+  line-height: $btn-size;
+  margin-left: -($btn-size / 2);
+  transition: all 0.25s ease-in-out;
+  transform: translateY(-50%);
+  &:hover {
+    background: $btn-bg-hover;
+    border-color: $btn-hover-border-color;
+    color: $btn-hover-color;
+  }
+  &:after {
+    position: absolute;
+    display: inline-block;
+    content: "";
+    width: $btn-arrowsize;
+    height: $btn-arrowsize;
+    top: 50%;
+    left: 50%;
+  }
+}
+
+.arrowbtn-left {
+  left: 100px;
+  &:after {
+    margin-left: -($btn-arrowsize * 0.25);
+    margin-top: -($btn-arrowsize * .5);
+    border-bottom: 2px solid;
+    border-left: 2px solid;
+    transform: rotateZ(45deg);
+  }
+}
+
+.arrowbtn-right {
+  right: 50px;
+  &:after {
+    margin-left: -($btn-arrowsize * .75);
+    margin-top: -($btn-arrowsize * .5);
+    border-top: 2px solid;
+    border-right: 2px solid;
+    transform: rotateZ(45deg);
+  }
 }

@@ -1,10 +1,32 @@
 import { useEffect } from "react";
 
-import './Projects.css'
+import { motion } from 'framer-motion';
+
+import './Projects.scss';
 
 import projects from "./data";
 
+let requestId;
+let scrollSpeed = 1;
 
+function scrolling(direction) {
+    requestId = requestAnimationFrame(() => scrolling(direction));
+    const scrollBar = document.getElementById("projects-scrollbar");
+    if (direction === "left") {
+        scrollBar.scrollLeft -= scrollSpeed
+    } else if (direction === "right") {
+        scrollBar.scrollLeft += scrollSpeed
+    }
+    console.log(scrollSpeed)
+    if (scrollSpeed < 50) {
+        scrollSpeed++;
+    }
+}
+
+function stopScroll() {
+    cancelAnimationFrame(requestId);
+    scrollSpeed = 1;
+}
 
 function Projects({setParallax}) {
 
@@ -15,8 +37,14 @@ function Projects({setParallax}) {
     return(
         <>
         <h1 className="projects-title">Projets</h1>
-        <div className="projects">
+        <motion.div className="projects"         
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1}}
+                    exit={{ opacity: 0 }}>
             <div className="scrollbar-effect"></div>
+            <div className="scrollbtn-wrapper">
+                <button onMouseDown={() => scrolling("left")} onMouseUp={stopScroll} onMouseLeave={stopScroll} className="arrowbtn arrowbtn-left"></button>
+            </div>
             <div className="projects-container" id="projects-scrollbar">
             {projects.map((p) => (
                 <a href={p.link} target="_blank" rel="noreferrer">
@@ -30,7 +58,10 @@ function Projects({setParallax}) {
                 </a>
             ))}
             </div>
-        </div>
+            <div className="scrollbtn-wrapper">
+                <button onMouseDown={() => scrolling("right")} onMouseUp={stopScroll} onMouseLeave={stopScroll} className="arrowbtn arrowbtn-right"></button>
+            </div>
+        </motion.div>
         </>
     )
 }
