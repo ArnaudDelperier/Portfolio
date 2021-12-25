@@ -47,7 +47,7 @@ function Projects({setParallax}) {
             </div>
             <div className="projects-container" id="projects-scrollbar">
             {projects.map((p) => (
-                <a href={p.link} target="_blank" rel="noreferrer">
+                <a href={p.link !== "none" ? p.link : null} target="_blank" rel="noreferrer">
                 <div key={p.name} className="project">
                     <img className="project__img" src={p.image} alt={p.name}/>
                     <div className="project__text">

@@ -14,7 +14,7 @@ const projects = [
     {
         name: "Pocket converter",
         description: "Application de conversion de devise.",
-        image: require('./img/horrorFootageFinder.png').default,
+        image: require('./img/pocket-converter.png').default,
         link: "https://pocket-converter.netlify.app/"
     },
     {
@@ -24,28 +24,22 @@ const projects = [
         link: "https://shifumi-lizard-spock.netlify.app/"
     },
     {
-        name: "Shifumi Lizard Spock",
-        description: 'Jeu du pierre-papier-ciseaux revisité version "The Big Bang Theory". ',
-        image: require('./img/horrorFootageFinder.png').default,
-        link: "https://shifumi-lizard-spock.netlify.app/"
+        name: "Work in progress",
+        description: 'De nouvelles applications arrivent très bientôt !". ',
+        image: require('./img/work-in-progress.png').default,
+        link: "none"
     },
     {
-        name: "Shifumi Lizard Spock",
-        description: 'Jeu du pierre-papier-ciseaux revisité version "The Big Bang Theory". ',
-        image: require('./img/horrorFootageFinder.png').default,
-        link: "https://shifumi-lizard-spock.netlify.app/"
+        name: "Work in progress",
+        description: 'De nouvelles applications arrivent très bientôt !". ',
+        image: require('./img/work-in-progress.png').default,
+        link: "none"
     },
     {
-        name: "Shifumi Lizard Spock",
-        description: 'Jeu du pierre-papier-ciseaux revisité version "The Big Bang Theory". ',
-        image: require('./img/horrorFootageFinder.png').default,
-        link: "https://shifumi-lizard-spock.netlify.app/"
-    },
-    {
-        name: "Shifumi Lizard Spock",
-        description: 'Jeu du pierre-papier-ciseaux revisité version "The Big Bang Theory". ',
-        image: require('./img/horrorFootageFinder.png').default,
-        link: "https://shifumi-lizard-spock.netlify.app/"
+        name: "Work in progress",
+        description: 'De nouvelles applications arrivent très bientôt !". ',
+        image: require('./img/work-in-progress.png').default,
+        link: "none"
     },
 ]
 
