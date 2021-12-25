@@ -73,12 +73,12 @@
     border: 2px solid gray;
 }
 
-.project:first-child {
-    margin: 32px 48px 32px 72px;
+.projects-container a:first-child {
+    margin-left: 60px;
 }
 
-.project:last-child {
-    margin: 32px 72px 32px 48px;
+.projects-container a:last-child {
+    margin-right: 60px;
 }
 
 
@@ -99,6 +99,7 @@
     width: 100%;
     position: absolute;
     opacity: 0;
+    font-size: 1.2rem;
     text-shadow: 1px 1px 1px #000;
 }
 
